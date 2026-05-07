@@ -4,9 +4,11 @@ import { Component } from "@angular/core";
     {
         selector: "mi-prodcuto",
         templateUrl: "producto.html",
-        styleUrl:"producto.css"
+        styleUrl: "producto.css"
     }
 )
 export class Producto {
-
+    constructor() {
+        console.log("Se ha car");
+    }
 }

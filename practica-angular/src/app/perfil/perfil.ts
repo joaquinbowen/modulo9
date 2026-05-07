@@ -8,5 +8,8 @@ import { Component } from "@angular/core";
     }
 )
 export class Perfil {
-
+    constructor() {
+        alert("Bienvenido al perfil, estas dentro de una aplicacion");
+        console.log("Se cargó el componente de perfil correctamente");
+    }
 }

@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 
 import { Perfil } from "./perfil/perfil";
+import { Producto } from "./producto/producto";
 
 @Component({
   selector: 'app-root',
-  imports: [Perfil],
+  imports: [Perfil, Producto],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

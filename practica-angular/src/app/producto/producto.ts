@@ -21,4 +21,17 @@ export class Producto {
         this.descripcion = "asdgnvodaskjngvodasngons";
         console.log("Se ha car");
     }
+
+    ngOnInit() {
+        console.log("on init componente")
+    }
+
+    ngDoCheck() {
+        //console.log("componente actualizado")
+    }
+
+    cambiarNombre() {
+        this.nombre = "Laptop Asus 177h"
+    }
+
 }

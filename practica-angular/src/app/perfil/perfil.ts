@@ -28,4 +28,18 @@ export class Perfil {
         this.direccion = "Fajardo";
         this.telefono = "0995531186";
     }
+
+    ngDoCheck() {
+        console.log("Componente actualizado ")
+    }
+
+    cambiarEdad() {
+        this.edad = 100
+    }
+
+    cambiarDireccion() {
+        this.direccion = "Calle A"
+    }
+
+
 }

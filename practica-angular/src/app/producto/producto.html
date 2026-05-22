@@ -3,4 +3,19 @@
 <p>{{precio }} </p>
 <strong>{{descripcion}} </strong>
 
+<br>
+<br>
 <button (click)="cambiarNombre()">Cambiar nombre del producto </button>
+
+<br>
+<br>
+@if (mostrar_peliculas==true) {
+<button (click)="ocultarPeliculas(false)">Ocultar componente de peliculas</button>
+}@else {
+<button (click)="ocultarPeliculas(true)">Mostrar componente de peliculas</button>
+}
+
+@if(mostrar_peliculas==true){
+<app-pelicula> </app-pelicula>
+}
+

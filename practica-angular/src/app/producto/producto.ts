@@ -1,10 +1,13 @@
 import { Component } from "@angular/core";
+import { Pelicula } from "../pelicula/pelicula";
+import { Cuenta } from "../cuenta/cuenta";
 
 @Component(
     {
         selector: "mi-prodcuto",
         templateUrl: "producto.html",
-        styleUrl: "producto.css"
+        styleUrl: "producto.css",
+        imports: [Pelicula]
     }
 )
 export class Producto {
@@ -12,6 +15,7 @@ export class Producto {
     public marca: string;
     public precio: number;
     public descripcion: string;
+    public mostrar_peliculas: boolean = true;
 
 
     constructor() {
@@ -33,5 +37,15 @@ export class Producto {
     cambiarNombre() {
         this.nombre = "Laptop Asus 177h"
     }
+
+    ngAfterViewInit() {
+        console.log("la vista esta cargada")
+    }
+
+    ocultarPeliculas(valor: boolean) {
+        this.mostrar_peliculas = valor;
+    }
+
+
 
 }

@@ -17,6 +17,7 @@ export class Perfil {
     public ocupacion: string;
     public direccion: string;
     public telefono: string;
+    public mostrar_cuenta: boolean = true;
 
 
     constructor() {
@@ -41,5 +42,8 @@ export class Perfil {
         this.direccion = "Calle A"
     }
 
+    ocultarCuenta(valor: boolean) {
+        this.mostrar_cuenta = valor;
+    }
 
 }

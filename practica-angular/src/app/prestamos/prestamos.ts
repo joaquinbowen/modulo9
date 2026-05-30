@@ -1,14 +1,21 @@
 import { Component } from '@angular/core';
+import { Transacciones } from '../transacciones/transacciones';
 
 @Component({
   selector: 'app-prestamos',
-  imports: [],
+  imports: [Transacciones],
   templateUrl: './prestamos.html',
   styleUrl: './prestamos.css',
 })
 export class Prestamos {
   web = "https://youtube.com";
   redirigir = true;
+
+  prestamo = {
+    id: 1,
+    tipo: "hipotecario",
+    interes: 4.5
+  };
 
   prestamosList = [
     { id: 1, monto: 5000, estado: "Aprobado" },

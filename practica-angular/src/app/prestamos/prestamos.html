@@ -12,6 +12,24 @@
 
 <button (click)="cambioRedireccion()">Modificar enlace</button>
 
+<h2>Información del Préstamo</h2>
+
+@switch(prestamo.tipo) {
+@case("personal") {
+<p>Este es un préstamo de tipo personal.</p>
+}
+@case("hipotecario") {
+<p>Este es un préstamo hipotecario.</p>
+<app-transacciones></app-transacciones>
+}
+@case("vehicular") {
+<p>Este préstamo es para la compra de un vehículo.</p>
+}
+@default {
+<p>Tipo de préstamo no reconocido.</p>
+}
+}
+
 <h2>Lista de Préstamos</h2>
 
 @for(prestamo of prestamosList; track prestamo.id) {

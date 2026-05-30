@@ -11,3 +11,13 @@
 }
 
 <button (click)="cambioRedireccion()">Modificar enlace</button>
+
+<h2>Lista de Préstamos</h2>
+
+@for(prestamo of prestamosList; track prestamo.id) {
+<div [class.aprobado]="prestamo.estado === 'Aprobado'" [class.pendiente]="prestamo.estado === 'Pendiente'">
+    <p><strong>ID:</strong> {{prestamo.id}}</p>
+    <p><strong>Monto:</strong> ${{prestamo.monto}}</p>
+    <p><strong>Estado:</strong> {{prestamo.estado}}</p>
+</div>
+}
